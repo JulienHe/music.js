@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Audio API</title>
+
+	<link rel="stylesheet" href="css/screen.css">
+</head>
+<body>
+	<section class="player">
+		<audio controls="controls" id="player" class="player--theplayer">
+			<source src="./mp3/Isola.mp3"></source>
+			<!-- <source src=""></source> -->
+		</audio>
+
+		<button id="btnPlay">Play</button>
+		<button id="btnPause">Pause</button>
+		<button id="btnStop">Stop</button>
+		<button id="btnMute">Mute</button>
+
+		<!-- <button id="btnPrev">Prev</button>
+		<button id="btnNext">Next</button> -->
+
+		<h2>Current</h2>
+		<section class="player--timer">
+			<span id="songTime" class="player--timer--currentTime">0:00</span>
+			<div class="player--timer--progress">
+				<span id="bufferPourcent" class="player--timer--progress--buffer"></span>
+				<span id="currentPourcent" class="player--timer--progress--current"></span>
+			</div>
+			<span id="songTimeFull" class="player--timer--fullTime">0:00</span>
+		</section>
+
+		<h2>Volume</h2>
+		<section class="player--volume player--volume">
+			<span class="player--volume--currentTime">-</span>
+			<div class="player--volume--progress">
+				<span id="currentVolume" class="player--volume--progress--current"></span>
+			</div>
+			<span class="player--volume--fullTime">+</span>
+		</section>
+	</section>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="js/main-min.js"></script>
+	
+	<!-- Load for SoundCloud -->
+	<script src="http://connect.soundcloud.com/sdk.js"></script>
+</body>
+</html>

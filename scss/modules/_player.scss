@@ -1,0 +1,51 @@
+.player{
+	&--theplayer{
+		display: none;
+	}
+	&--timer,
+	&--volume{
+		width: 100%;
+		@extend .clearfix;
+		&--currentTime,
+		&--fullTime{
+			display: inline-block;
+			width: 50px;
+			float: left;
+			text-align: center;
+		}
+		&--progress{
+			width: calc(100% - 100px);
+			display: inline-block;
+			height: 20px;
+			vertical-align: middle;
+			float: left;
+			position: relative;
+			&:before{
+				content: '';
+				position: absolute;
+				top: 5px;
+				left: 0;
+				width: 100%;
+				height: 5px;
+				background-color: lighten($background, 10%);
+			}
+			&--current,
+			&--buffer{
+				background-color: $green;
+				height: 5px;
+				display: inline-block;
+				width: 0;
+				position: absolute;
+				top: 5px;
+				left: 0;
+				@include transition(width .25s);
+			}
+			&--buffer{
+				background-color: lighten($background, 15%);
+			}
+		}
+	}
+	&--volume{
+		width: 50%;
+	}
+}

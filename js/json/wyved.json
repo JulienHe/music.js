@@ -1,0 +1,22 @@
+{
+  "waved": {
+    "artist": "wλved",
+    "cover": "http://www.wyved.com/wp-content/uploads/2014/11/a3059950265_10-1024x1024.jpg",
+    "playlist": "waved",
+    "facebook": "https://www.facebook.com/wyved",
+    "twitter": "https://twitter.com/Wyved",
+    "website": "https://soundcloud.com/wyved",
+    "souncloud": "http://www.wyved.com/",
+    "path": "/wyved/",
+    "songs": {
+        "1" : {
+          "song" : "Flume_&_friends",
+          "category" : "chill"
+        },
+        "2" : {
+          "song" : "Flume_&_friends",
+          "category" : "chill"
+        }
+    }
+  }
+}

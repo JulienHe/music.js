@@ -1,0 +1,108 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+html {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+q, blockquote {
+  quotes: none; }
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+a img {
+  border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block; }
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.clearfix:before, .player--timer:before, .player--volume:before, .clearfix:after, .player--timer:after, .player--volume:after {
+  content: '';
+  display: table; }
+
+.clearfix:after, .player--timer:after, .player--volume:after {
+  clear: both; }
+
+body {
+  background-color: #232936;
+  color: white;
+  padding: 10px; }
+
+.player--theplayer {
+  display: none; }
+.player--timer, .player--volume {
+  width: 100%; }
+  .player--timer--currentTime, .player--timer--fullTime, .player--volume--currentTime, .player--volume--fullTime {
+    display: inline-block;
+    width: 50px;
+    float: left;
+    text-align: center; }
+  .player--timer--progress, .player--volume--progress {
+    width: calc(100% - 100px);
+    display: inline-block;
+    height: 20px;
+    vertical-align: middle;
+    float: left;
+    position: relative; }
+    .player--timer--progress:before, .player--volume--progress:before {
+      content: '';
+      position: absolute;
+      top: 5px;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background-color: #374055; }
+    .player--timer--progress--current, .player--timer--progress--buffer, .player--volume--progress--current, .player--volume--progress--buffer {
+      background-color: #00C975;
+      height: 5px;
+      display: inline-block;
+      width: 0;
+      position: absolute;
+      top: 5px;
+      left: 0;
+      -moz-transition: width 0.25s;
+      -o-transition: width 0.25s;
+      -webkit-transition: width 0.25s;
+      transition: width 0.25s; }
+    .player--timer--progress--buffer, .player--volume--progress--buffer {
+      background-color: #414c64; }
+.player--volume {
+  width: 50%; }
